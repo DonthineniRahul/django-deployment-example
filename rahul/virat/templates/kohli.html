@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Kohli</title>
+</head>
+<h1>Kohli's Cover Drive</h1>
+<body>
+	<p>There is always something special about his cover drive.</p>
+	<a href="{% url 'virat:kohli' %}">Next Page</a>
+
+	{% if user.is_authenticated %}
+		<li><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
+	{% else %}
+		<li><a class="nav-link" href="{% url 'virat:user_login'%}">Login</a></li>
+	{% endif %}
+
+
+
+</body>
+</html>
